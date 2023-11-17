@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer quiz</title>
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="./css/settings.css">
+    <script src="./js/all.js"></script>
+</head>
+<body class="min-h-screen bg-yellow-300 flex justify-center items-center flex-col gap-4">
+    <!-- sounds -->
+    <audio src="sounds/aww.mp3" id="wrong-sound"></audio>
+    <audio src="sounds/cash.mp3" id="correct-sound"></audio>
+    <audio src="sounds/dance-music.mp3" autoplay loop id="dance-sound"></audio>
+    <audio src="sounds/trumpet.wav" id="completed-sound"></audio>
+    <audio src="sounds/suspense.wav" loop id="hint-sound"></audio>
+    <!-- end of sounds -->
+    <!-- quiz container -->
+    <div class="container bg-purple-900 py-5 px-3 quiz-container rounded-md overflow-hidden"> 
+        <!-- title box -->
+        <div class="w-full p-2 bg-red-700 mb-2">
+            <h2 class="text-white text-xl text-center uppercase font-bold">Computer quiz</h2>
+        </div>
+        <!-- end of title box -->
+        <!-- question wrapper -->
+        <div class="w-full flex items-center justify-center flex-col md:flex-row gap-3 relative" style="height: calc(100% - 48px);">
+            <!-- completed dialog box -->
+            <div class="absolute top-1/2 left-1/2 z-30 p-4 bg-gradient-to-b from-purple-950 to-red-700 w-[95%] sm:w-3/4 h-3/5 rounded-3xl flex flex-col items-center justify-center gap-6 vanish" id="complete-dialog">
+                <div class="text-3xl text-white font-semibold text-center tracking-wider" style="font-family: cursive;">You have completed the quiz!!!</div>
+                <!-- results -->
+                <div class="w-full text-center font-bold">
+                    <h4 class="text-green-600">Correct: <span id="correct-ans"></span></h4>
+                    <h4 class="text-fuchsia-600">Wrong: <span id="wrong-ans"></span></h4>
+                    <h3 class="text-xl md:text-2xl text-purple-500">Score percentage: <span id="score-per"></span></h3>
+                </div>
+                <!-- end of results -->
+                <button class="px-3 py-2 bg-cyan-600 text-2xl font-bold text-red-200 rounded-lg" data-new-game>New Game</button>
+            </div>
+            <!-- end of completed dialog box -->
+            <!-- hint box -->
+            <div class="absolute top-1/2 left-1/2 vanish z-30 p-4 bg-gradient-to-r from-purple-400 to-green-600 h-full w-full rounded-3xl flex flex-col items-center justify-center gap-6 text-2xl md:text-4xl font-semibold text-yellow-200" id="hint-display">
+                <h2>I think the answer is <span class="text-4xl md:text-5xl font-bold" id="hint-ans"></span></h2>
+                <button class="absolute top-5 right-8 text-5xl p-2" id="hint-close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <!-- end of hint box -->
+            <!-- question box -->
+            <div class="w-full md:w-1/2 h-1/2 px-2 py-10 bg-yellow-500 md:h-full rounded-2xl relative flex justify-center items-center md:items-start" id="question-box">
+                <!-- progress, hint and music button info -->
+                <div class="absolute top-0 -translate-y-1/2 left-0 rounded-ss-2xl rounded-e shadow-lg p-1 w-24 bg-inherit flex items-center justify-center gap-2 font-bold text-red-700 text-xl">
+                    <div id="current-number"></div> / 
+                    <div id="total-number"></div>
+                </div>
+                <button class="absolute top-0 -translate-y-1/2 -translate-x-1/2 left-1/2 rounded-ss-2xl rounded-e shadow-lg p-1 w-24 bg-green-700 flex items-center justify-center gap-2 font-bold text-red-200 text-lg" aria-label="hint button" id="hint-btn">
+                    hint
+                    <i class="fas fa-lightbulb"></i>
+                    <div class="absolute bottom-[-50%] bg-inherit right-[-20%] -translate-y-1/2 rounded-lg text-sm p-1 shadow-lg">
+                        ( <span id="hint-count"></span> )
+                    </div>
+                </button>
+                <button class="absolute top-0 -translate-y-1/2 right-0 rounded-ss-2xl rounded-e shadow-lg py-1 w-24 bg-inherit flex items-center justify-center gap-2 font-bold text-yellow-400 bg-rose-600 text-xl duration-500" id="volume-btn">
+                    <h5 style="font-size: 1rem;">On</h5>
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <!-- end of progress info -->
+                <!-- question text -->
+                <p id="question" class="font-bold sm:text-2xl md:text-3xl  text-center" style="font-family: Calibri, sans-serif;"></p>
+                <!-- end of question text -->
+            </div>
+            <!-- end of question box -->
+            <!-- answer box -->
+            <div class="w-full md:w-1/2 p-2 h-1/2 bg-green-500 md:h-full rounded-2xl flex flex-col items-center justify-between">
+                <!-- possible answers box -->
+                <div class="w-full flex items-center justify-center flex-col gap-1 md:gap-4">
+                    <div class="w-full p-2 md:py-4 md:px-3 bg-cyan-800 rounded-lg sm:text-xl md:text-3xl tracking-tight text-[#fadc31] font-semibold cursor-pointer duration-500" data-pos-ans id="ans-a-main"><span data-this-ans>A</span> <span id="ans-a" class="text-white font-normal"></span>
+                    </div>
+                    <div class="w-full p-2 bg-cyan-800 rounded-lg sm:text-xl tracking-tight text-[#fadc31] font-semibold cursor-pointer md:text-3xl md:py-4 md:px-3" id="ans-b-main" data-pos-ans><span data-this-ans>B</span> <span id="ans-b" class="text-white font-normal duration-500"></span>
+                    </div>
+                    <div class="w-full p-2 bg-cyan-800 rounded-lg sm:text-xl tracking-tight text-[#fadc31] font-semibold cursor-pointer md:text-3xl md:py-4 md:px-3" id="ans-c-main" data-pos-ans><span data-this-ans>C</span> <span id="ans-c" class="text-white font-normal duration-500"></span>
+                    </div>
+                    <div class="w-full p-2 bg-cyan-800 rounded-lg sm:text-xl tracking-tight text-[#fadc31] font-semibold cursor-pointer md:text-3xl md:py-4 md:px-3" id="ans-d-main" data-pos-ans><span data-this-ans>D</span> <span id="ans-d" class="text-white font-normal duration-500"></span>
+                    </div>
+                </div>
+                <!-- end of possible answers box -->
+            </div>
+            <!-- end of answer box -->
+        </div>
+        <!-- end of question wrapper -->
+    </div>
+    <!-- end of quiz container -->
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

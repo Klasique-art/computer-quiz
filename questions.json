@@ -1,0 +1,213 @@
+{
+    "quizzes": [
+      {
+        "question": "What does CPU stand for?",
+        "ans_a": "Central Process Unit",
+        "ans_b": "Computer Personal Unit",
+        "ans_c": "Central Processor Unit",
+        "ans_d": "Central Processing Unit",
+        "correct_ans": "d"
+      },
+      {
+        "question": "Which programming language is known for its readability and simplicity?",
+        "ans_a": "Java",
+        "ans_b": "Python",
+        "ans_c": "C++",
+        "ans_d": "Ruby",
+        "correct_ans": "b"
+      },
+      {
+        "question": "What does HTML stand for in web development?",
+        "ans_a": "Hyperlink and Text Markup Language",
+        "ans_b": "Hypertext Markup Language",
+        "ans_c": "High-Level Text Markup Language",
+        "ans_d": "Hyper Transfer Markup Language",
+        "correct_ans": "b"
+      },
+      {
+        "question": "Which protocol is used for secure communication over a computer network?",
+        "ans_a": "FTP",
+        "ans_b": "HTTP",
+        "ans_c": "SSH",
+        "ans_d": "SMTP",
+        "correct_ans": "c"
+      },
+      {
+        "question": "What is the purpose of a firewall in network security?",
+        "ans_a": "To filter spam emails",
+        "ans_b": "To prevent unauthorized access",
+        "ans_c": "To optimize internet speed",
+        "ans_d": "To encrypt data transmission",
+        "correct_ans": "b"
+      },
+      {
+        "question": "What does the acronym SQL stand for?",
+        "ans_a": "Structured Query Language",
+        "ans_b": "Sequential Query Language",
+        "ans_c": "Simple Query Language",
+        "ans_d": "Systematic Question Language",
+        "correct_ans": "a"
+      },
+      {
+        "question": "Which programming paradigm does JavaScript primarily follow?",
+        "ans_a": "Procedural",
+        "ans_b": "Object-Oriented",
+        "ans_c": "Functional",
+        "ans_d": "Imperative",
+        "correct_ans": "b"
+      },
+      {
+        "question": "What is the purpose of a CDN (Content Delivery Network) in web development?",
+        "ans_a": "Database management",
+        "ans_b": "Load balancing",
+        "ans_c": "Data encryption",
+        "ans_d": "File compression",
+        "correct_ans": "b"
+      },
+      {
+        "question": "In networking, what does IP stand for?",
+        "ans_a": "Internet Protocol",
+        "ans_b": "Internal Process",
+        "ans_c": "Intranet Protocol",
+        "ans_d": "Internet Provider",
+        "correct_ans": "a"
+      },
+      {
+        "question": "What is the purpose of the HTTP status code '404'?",
+        "ans_a": "Server error",
+        "ans_b": "Page not found",
+        "ans_c": "Request timeout",
+        "ans_d": "Access forbidden",
+        "correct_ans": "b"
+      },
+      {
+        "question": "Which data structure uses the Last In, First Out (LIFO) principle?",
+        "ans_a": "Queue",
+        "ans_b": "Stack",
+        "ans_c": "Linked List",
+        "ans_d": "Tree",
+        "correct_ans": "b"
+      },
+      {
+        "question": "What is the purpose of a VPN (Virtual Private Network) in network security?",
+        "ans_a": "To filter spam",
+        "ans_b": "To provide secure communication over the internet",
+        "ans_c": "To detect malware",
+        "ans_d": "To manage network traffic",
+        "correct_ans": "b"
+      },
+      {
+        "question": "Which programming language is commonly used for developing mobile applications?",
+        "ans_a": "Java",
+        "ans_b": "Swift",
+        "ans_c": "C#",
+        "ans_d": "All of the above",
+        "correct_ans": "d"
+      },
+      {
+        "question": "What is the primary purpose of an operating system?",
+        "ans_a": "File management",
+        "ans_b": "Hardware management",
+        "ans_c": "User interface",
+        "ans_d": "All of the above",
+        "correct_ans": "d"
+      },
+      {
+        "question": "Which encryption algorithm is widely used for securing internet communication?",
+        "ans_a": "AES",
+        "ans_b": "RSA",
+        "ans_c": "MD5",
+        "ans_d": "SHA-1",
+        "correct_ans": "a"
+      },
+      {
+        "question": "What does HTML5 introduce to enhance web development capabilities?",
+        "ans_a": "New programming language",
+        "ans_b": "Improved styling options",
+        "ans_c": "Video and audio support",
+        "ans_d": "Enhanced security features",
+        "correct_ans": "c"
+      },
+      {
+        "question": "Which database model organizes data in tables with rows and columns?",
+        "ans_a": "Hierarchical",
+        "ans_b": "Relational",
+        "ans_c": "Network",
+        "ans_d": "Object-Oriented",
+        "correct_ans": "b"
+      },
+      {
+        "question": "What is the purpose of the CSS (Cascading Style Sheets) language in web development?",
+        "ans_a": "Server-side scripting",
+        "ans_b": "Database management",
+        "ans_c": "Styling and formatting web pages",
+        "ans_d": "Network security",
+        "correct_ans": "c"
+      },
+      {
+        "question": "Which version control system is commonly used in software development for tracking changes in source code?",
+        "ans_a": "Git",
+        "ans_b": "SVN",
+        "ans_c": "Mercurial",
+        "ans_d": "Perforce",
+        "correct_ans": "a"
+      },
+      {
+        "question": "What is the purpose of the DNS (Domain Name System) in networking?",
+        "ans_a": "IP address assignment",
+        "ans_b": "Email management",
+        "ans_c": "Name resolution to IP addresses",
+        "ans_d": "Data encryption",
+        "correct_ans": "c"
+      },
+      {
+        "question": "Which cloud computing service provides virtualized computing resources over the internet?",
+        "ans_a": "Platform as a Service (PaaS)",
+        "ans_b": "Software as a Service (SaaS)",
+        "ans_c": "Infrastructure as a Service (IaaS)",
+        "ans_d": "Function as a Service (FaaS)",
+        "correct_ans": "c"
+      },
+      {
+        "question": "What is the purpose of a router in a computer network?",
+        "ans_a": "Data storage",
+        "ans_b": "Data transmission",
+        "ans_c": "Device security",
+        "ans_d": "Web hosting",
+        "correct_ans": "b"
+      },
+      {
+        "question": "Which programming language is often used for data analysis and machine learning?",
+        "ans_a": "Python",
+        "ans_b": "Java",
+        "ans_c": "C++",
+        "ans_d": "JavaScript",
+        "correct_ans": "a"
+      },
+      {
+        "question": "What is the role of an API (Application Programming Interface) in software development?",
+        "ans_a": "User interface design",
+        "ans_b": "Data storage",
+        "ans_c": "Communication between software components",
+        "ans_d": "Hardware management",
+        "correct_ans": "c"
+      },
+      {
+        "question": "Which cybersecurity practice involves converting data into a code to prevent unauthorized access?",
+        "ans_a": "Firewall",
+        "ans_b": "Encryption",
+        "ans_c": "Antivirus",
+        "ans_d": "Intrusion detection",
+        "correct_ans": "b"
+      },
+      {
+        "question": "What is the purpose of a cookie in web development?",
+        "ans_a": "Enhancing website design",
+        "ans_b": "Storing user preferences",
+        "ans_c": "Managing server resources",
+        "ans_d": "Ensuring website accessibility",
+        "correct_ans": "b"
+      }
+    ]
+  }
+  

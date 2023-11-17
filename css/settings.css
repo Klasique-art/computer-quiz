@@ -1,0 +1,33 @@
+svg {
+    pointer-events: none;
+}
+body {
+    user-select: none;
+}
+
+.quiz-container {
+    height: 90vh;
+}
+.vanish {
+    transition: .5s;
+    transform-origin: center center;
+    transform: translate(-50%, -50%) scale(0);
+    visibility: hidden;
+}
+.appear {
+    transition: .5s  cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform-origin: center center;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+}
+.correct {
+    background-color: rgb(10, 138, 10)!important;
+}
+.wrong {
+    background-color: rgb(248, 20, 20)!important;
+}
+@media (max-width: 480px) {
+    .quiz-container {
+        height: 100vh;
+    }
+}
